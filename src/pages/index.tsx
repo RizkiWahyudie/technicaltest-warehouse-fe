@@ -1,10 +1,11 @@
 import ModalDelete from "../components/ModalDelete";
 import ProductFormModal from "../components/products/ProductFormModal";
 import { GetServerSideProps } from "next";
-import { parseCookies } from "nookies";
+import { parseCookies, destroyCookie } from "nookies";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import useSWR from "swr";
+import { useRouter } from "next/router";
 
 type Product = {
   code: string;
@@ -31,6 +32,7 @@ const fetcher = (url: string, token: string) =>
   });
 
 export default function Home({ token }: { token: string }) {
+  const router = useRouter();
   const { data, error, mutate } = useSWR<Product[]>(
     token ? ["http://localhost:5050/api/products", token] : null,
     ([url, token]) => fetcher(url, token)
@@ -63,11 +65,16 @@ export default function Home({ token }: { token: string }) {
   };
 
   const handleSave = () => {
-    mutate(); // Re-fetch product list
+    mutate();
   };
 
   const handleDeleteSuccess = () => {
-    mutate(); // Re-fetch after deletion
+    mutate();
+  };
+
+  const handleLogout = () => {
+    destroyCookie(null, "token");
+    router.push("/login");
   };
 
   return (
@@ -75,12 +82,20 @@ export default function Home({ token }: { token: string }) {
       <div className="max-w-5xl mx-auto bg-white p-4 rounded shadow">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-bold">Daftar Produk</h1>
-          <button
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-            onClick={handleCreate}
-          >
-            + Create
-          </button>
+          <div className="space-x-2">
+            <button
+              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+              onClick={handleCreate}
+            >
+              + Create
+            </button>
+            <button
+              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         <table className="w-full table-auto border border-gray-300">

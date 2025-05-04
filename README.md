@@ -1,40 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Warehouse Management System - Technical Test
 
-## Getting Started
+This is a [Next.js](https://nextjs.org) project for a Warehouse Management System technical test.
 
-First, run the development server:
+## System Status  
+✅ Frontend deployed: [Live Demo](https://technicaltest-warehouse-fe.vercel.app/)  
+❌ Backend not deployed (limited functionality)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Login Credentials
+```
+Email: admin@warehouse.com
+Password: password123
+```
+```
+Email: staff@warehouse.com
+Password: password123
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Run Locally
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 1. Clone repository
+```bash
+git clone https://github.com/your-repo/warehouse-management.git
+cd warehouse-management
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### 3. Run development server
+```bash
+npm run dev
+```
+Access at: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run tests
+```bash
+npm run test
+```
 
-## Learn More
+### 5. Build for production
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## System Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### 1. Login Page
+![Login Page](/images/ssLogin.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Dashboard
+![Dashboard Page](/images/ssHome.png)
 
-## Deploy on Vercel
+### 3. Video Demo
+![Warehouse Demo Video technicaltest-warehouse-fe.vercel.app](https://technicaltest-warehouse-fe.vercel.app/video/demo-video.mp4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Deployment Info
+Frontend automatically deploys to Vercel on main branch pushes.  
+Backend deployment coming soon.

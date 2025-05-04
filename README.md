@@ -20,8 +20,8 @@ Password: password123
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/your-repo/warehouse-management.git
-cd warehouse-management
+git clone https://github.com/RizkiWahyudie/technicaltest-warehouse-fe.git
+cd technicaltest-warehouse-fe
 ```
 
 ### 2. Install dependencies

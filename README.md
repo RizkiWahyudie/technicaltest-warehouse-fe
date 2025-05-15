@@ -3,7 +3,7 @@
 This is a [Next.js](https://nextjs.org) project for a Warehouse Management System technical test.
 
 ## System Status  
-✅ Frontend deployed: [Live Demo](https://technicaltest-warehouse-fe.vercel.app/)  
+✅ Frontend deployed: [Live Demo](https://warehouse-fe.vercel.app/)  
 ❌ Backend not deployed (limited functionality)
 
 ## Login Credentials
@@ -20,8 +20,8 @@ Password: password123
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/RizkiWahyudie/technicaltest-warehouse-fe.git
-cd technicaltest-warehouse-fe
+git clone https://github.com/RizkiWahyudie/warehouse-fe.git
+cd warehouse-fe
 ```
 
 ### 2. Install dependencies
@@ -54,7 +54,7 @@ npm run build
 ![Dashboard Page](/images/ssHome.png)
 
 ### 3. Video Demo
-![Warehouse Demo Video technicaltest-warehouse-fe.vercel.app](https://technicaltest-warehouse-fe.vercel.app/video/demo-video.mp4)
+![Warehouse Demo Video warehouse-fe.vercel.app](https://warehouse-fe.vercel.app/video/demo-video.mp4)
 
 ## Deployment Info
 Frontend automatically deploys to Vercel on main branch pushes.  

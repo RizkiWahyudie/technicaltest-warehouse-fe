@@ -23,7 +23,7 @@ const ProductTable = ({
     {
       header: "Berat",
       accessor: "weight",
-      render: (product: ProductType) => `${product.weight} kg`,
+      render: (product: ProductType) => `${product.weight}`,
     },
     { header: "Satuan", accessor: "unit_of_measurement" },
     {
